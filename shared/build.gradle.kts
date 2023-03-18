@@ -65,6 +65,13 @@ kotlin {
     }
 }
 
+sqldelight {
+    database("KanjiDatabase") {
+        packageName = "co.jp.arcanium.mykanji.database"
+        sourceFolders = listOf("sqldelight")
+    }
+}
+
 android {
     namespace = "co.jp.arcanium.mykanji"
     compileSdk = 33

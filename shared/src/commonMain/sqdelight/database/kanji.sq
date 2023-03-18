@@ -1,0 +1,26 @@
+CREATE TABLE kanji_table (
+    kanji TEXT PRIMARY KEY,
+    meaning TEXT NOT NULL,
+    onyomi TEXT,
+    kunyomi TEXT,
+    incorrect_count INTEGER NOT NULL DEFAULT 0,
+    created_at TEXT NOT NULL
+);
+
+insertKanji:
+INSERT INTO kanji_table (kanji, meaning, onyomi, kunyomi, created_at)
+VALUES (?, ?, ?, ?, ?);
+
+selectAllKanji:
+SELECT * FROM kanji_table
+ORDER BY created_at DESC;
+
+selectRecentKanji:
+SELECT * FROM kanji_table
+ORDER BY created_at DESC LIMIT ?;
+
+deleteKanji:
+DELETE FROM kanji_table WHERE kanji = ?;
+
+updateKanji:
+UPDATE kanji_table SET meaning = ?, onyomi = ?, kunyomi = ?, incorrect_count = ? WHERE kanji = ?;
