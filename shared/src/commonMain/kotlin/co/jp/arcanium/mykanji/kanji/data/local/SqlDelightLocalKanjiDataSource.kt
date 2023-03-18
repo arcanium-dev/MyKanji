@@ -1,16 +1,16 @@
-package co.jp.arcanium.mykanji.kanji.data
+package co.jp.arcanium.mykanji.kanji.data.local
 
 import co.jp.arcanium.mykanji.database.KanjiDatabase
-import co.jp.arcanium.mykanji.kanji.domain.KanjiDataSource
+import co.jp.arcanium.mykanji.kanji.domain.LocalKanjiDataSource
 import co.jp.arcanium.mykanji.kanji.domain.model.Kanji
 import co.jp.arcanium.mykanji.kanji.domain.util.DateTimeUtil
 import database.Kanji_table
 import kotlinx.datetime.Instant
 import kotlinx.datetime.toLocalDateTime
 
-class SqlDelightKanjiDataSource(
+class SqlDelightLocalKanjiDataSource(
     database: KanjiDatabase
-) : KanjiDataSource {
+) : LocalKanjiDataSource {
     private val queries = database.kanjiQueries
 
     override suspend fun insertKanji(kanji: Kanji) {

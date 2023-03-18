@@ -2,7 +2,7 @@ package co.jp.arcanium.mykanji.kanji.domain
 
 import co.jp.arcanium.mykanji.kanji.domain.model.Kanji
 
-interface KanjiDataSource {
+interface LocalKanjiDataSource {
     suspend fun insertKanji(kanji: Kanji)
     suspend fun selectAllKanji(): List<Kanji>
     suspend fun selectKanji(kanji: String): Kanji?
