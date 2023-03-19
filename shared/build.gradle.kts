@@ -28,6 +28,7 @@ kotlin {
             dependencies {
                 implementation("com.squareup.sqldelight:runtime:1.5.3")
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+                implementation("com.russhwolf:multiplatform-settings:0.8.1")
             }
         }
         val commonTest by getting {
@@ -38,6 +39,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("com.squareup.sqldelight:android-driver:1.5.3")
+                implementation("com.russhwolf:multiplatform-settings-android:0.8.1")
             }
         }
 //        val androidUnitTest by getting
