@@ -10,4 +10,4 @@ internal val MyKanjiLightColorScheme: ColorScheme = lightColorScheme()
 internal val MyKanjiDarkColorScheme: ColorScheme = darkColorScheme()
 
 @Composable
-internal fun MyKanjiColorScheme(): ColorScheme = if (isSystemInDarkTheme()) MyKanjiDarkColorScheme else MyKanjiLightColorScheme
+internal fun myKanjiColorScheme(): ColorScheme = if (isSystemInDarkTheme()) MyKanjiDarkColorScheme else MyKanjiLightColorScheme

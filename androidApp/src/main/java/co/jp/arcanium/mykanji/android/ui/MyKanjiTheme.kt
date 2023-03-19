@@ -9,8 +9,8 @@ fun MyKanjiTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
-        colorScheme = MyKanjiColorScheme(),
-        typography = MyKanjiTypography(),
+        colorScheme = myKanjiColorScheme(),
+        typography = myKanjiTypography(),
         shapes = Shapes(),
         content = content
     )
