@@ -39,10 +39,8 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("com.squareup.sqldelight:android-driver:1.5.3")
-                implementation("com.russhwolf:multiplatform-settings-android:0.8.1")
             }
         }
-//        val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
