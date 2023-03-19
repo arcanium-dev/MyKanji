@@ -5,6 +5,13 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+configurations.all {
+    resolutionStrategy {
+        force("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
+        force("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10")
+    }
+}
+
 android {
     namespace = "co.jp.arcanium.mykanji.android"
     compileSdk = 33
@@ -53,8 +60,12 @@ dependencies {
 
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
 
+    // Hilt
     implementation("com.google.dagger:hilt-android:2.42")
     kapt("com.google.dagger:hilt-android-compiler:2.42")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+
+    // Lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.0")
 }

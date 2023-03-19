@@ -8,7 +8,7 @@ CREATE TABLE kanji_table (
 );
 
 insertKanji:
-INSERT INTO kanji_table (kanji, meaning, onyomi, kunyomi, createdAt)
+INSERT OR IGNORE INTO kanji_table(kanji, meaning, onyomi, kunyomi, createdAt)
 VALUES (?, ?, ?, ?, ?);
 
 selectAllKanji:

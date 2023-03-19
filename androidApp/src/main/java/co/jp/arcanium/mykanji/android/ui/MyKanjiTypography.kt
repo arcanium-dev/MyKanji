@@ -15,12 +15,20 @@ val light = Font(R.font.light)
 
 internal fun myKanjiTypography(): Typography {
     return Typography(
+        displayMedium = TextStyle(
+            fontFamily = FontFamily(bold),
+            fontSize = 48.sp
+        ),
         headlineSmall = TextStyle(
             fontFamily = FontFamily(bold),
             fontSize = 28.sp
         ),
         bodyMedium = TextStyle(
             fontFamily = FontFamily(bold),
+            fontSize = 16.sp
+        ),
+        labelMedium = TextStyle(
+            fontFamily = FontFamily(light),
             fontSize = 16.sp
         )
     )
