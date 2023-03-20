@@ -47,10 +47,88 @@ data class Kanji(
             Kanji(kanji = "寺", meaning = "Temple", hint = "", questionAnswerPair = null, onyomi = "ji", kunyomi = "tera", incorrectCount = 0, createdAt = DateTimeUtil.now()),
             Kanji(kanji = "時", meaning = "Time", hint = "", questionAnswerPair = null, onyomi = "ji", kunyomi = "toki", incorrectCount = 0, createdAt = DateTimeUtil.now()),
             Kanji(kanji = "半", meaning = "Half", hint = "", questionAnswerPair = null, onyomi = "han", kunyomi = "naka", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+
             Kanji(kanji = "刀", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
             Kanji(kanji = "分", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
             Kanji(kanji = "上", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
-            Kanji(kanji = "下", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now())
+            Kanji(kanji = "下", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "中", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "右", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "工", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "左", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "前", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+
+            Kanji(kanji = "後", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "午", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "問", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "間", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "東", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "西", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "南", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "北", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "田", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "力", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+
+            Kanji(kanji = "男", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "女", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "子", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "学", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "生", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "先", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "何", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "父", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "母", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "年", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+
+            Kanji(kanji = "去", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "毎", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "王", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "国", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "見", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "行", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "米", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "来", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "良", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "食", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+
+            Kanji(kanji = "去", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "毎", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "王", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "国", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "見", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "行", meaning = "sword", hint = "", questionAnswerPair = null, onyomi = "tou", kunyomi = "katana", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "米", meaning = "part", hint = "", questionAnswerPair = null, onyomi = "bun", kunyomi = "wake", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "来", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+            Kanji(kanji = "良", meaning = "below", hint = "", questionAnswerPair = null, onyomi = "ka", kunyomi = "shita", incorrectCount = 0, createdAt = DateTimeUtil.now()),
+            Kanji(kanji = "食", meaning = "above", hint = "", questionAnswerPair = null, onyomi = "jou", kunyomi = "ue", incorrectCount = 0, createdAt = DateTimeUtil.now()) ,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         )
     }
 }
