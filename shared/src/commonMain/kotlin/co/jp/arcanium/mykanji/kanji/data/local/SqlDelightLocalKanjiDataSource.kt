@@ -3,7 +3,9 @@ package co.jp.arcanium.mykanji.kanji.data.local
 import co.jp.arcanium.mykanji.database.KanjiDatabase
 import co.jp.arcanium.mykanji.kanji.domain.LocalKanjiDataSource
 import co.jp.arcanium.mykanji.kanji.domain.model.Kanji
+import co.jp.arcanium.mykanji.kanji.domain.model.KanjiQuestion
 import co.jp.arcanium.mykanji.kanji.domain.util.DateTimeUtil
+import database.Kanji_question_table
 import database.Kanji_table
 import kotlinx.datetime.Instant
 import kotlinx.datetime.toLocalDateTime
@@ -19,7 +21,8 @@ class SqlDelightLocalKanjiDataSource(
             meaning = kanji.meaning,
             onyomi = kanji.onyomi,
             kunyomi = kanji.kunyomi,
-            createdAt = DateTimeUtil.toEpochMillis(kanji.createdAt)
+            createdAt = DateTimeUtil.toEpochMillis(kanji.createdAt),
+            hint = ""
         )
     }
 
@@ -41,9 +44,30 @@ class SqlDelightLocalKanjiDataSource(
             onyomi = kanji.onyomi,
             kunyomi = kanji.kunyomi,
             incorrectCount = kanji.incorrectCount?.toLong() ?: 0,
-            kanji = kanji.kanji
+            kanji = kanji.kanji,
+            hint = ""
         )
     }
+
+    override suspend fun insertVocabQuestion(kanji: String, kanjiQuestion: KanjiQuestion) {
+        queries.insertVocabQuestion(
+            kanji = kanji,
+            question = kanjiQuestion.question,
+            answer = kanjiQuestion.answer
+        )
+    }
+
+    override suspend fun selectVocabQuestions(kanji: String): List<KanjiQuestion> {
+        return queries.selectVocabQuestions(kanji = kanji).executeAsList().map { it.toKanjiQuestion() }
+    }
+
+    override suspend fun deleteVocabQuestion(kanjiQuestion: KanjiQuestion) {
+        queries.deleteVocabQuestion(
+            kanji = kanjiQuestion.question,
+            question = kanjiQuestion.question
+        )
+    }
+
 }
 
 fun Kanji_table.toKanji(): Kanji {
@@ -55,6 +79,15 @@ fun Kanji_table.toKanji(): Kanji {
         incorrectCount = this.incorrectCount.toInt(),
         createdAt = Instant
             .fromEpochMilliseconds(createdAt)
-            .toLocalDateTime(kotlinx.datetime.TimeZone.currentSystemDefault())
+            .toLocalDateTime(kotlinx.datetime.TimeZone.currentSystemDefault()),
+        hint = this.hint,
+        questionAnswerPair = null
+    )
+}
+
+fun Kanji_question_table.toKanjiQuestion(): KanjiQuestion {
+    return KanjiQuestion(
+        question = this.question,
+        answer = this.answer
     )
 }

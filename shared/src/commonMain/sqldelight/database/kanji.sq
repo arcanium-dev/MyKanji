@@ -1,15 +1,28 @@
 CREATE TABLE kanji_table (
     kanji TEXT PRIMARY KEY,
     meaning TEXT NOT NULL,
+    hint TEXT NOT NULL,
     onyomi TEXT,
     kunyomi TEXT,
     incorrectCount INTEGER NOT NULL DEFAULT 0,
     createdAt INTEGER NOT NULL
 );
 
+CREATE TABLE kanji_question_table (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    kanji TEXT NOT NULL,
+    question TEXT NOT NULL,
+    answer TEXT NOT NULL,
+    FOREIGN KEY (kanji) REFERENCES kanji_table (kanji) ON DELETE CASCADE
+);
+
 insertKanji:
-INSERT OR IGNORE INTO kanji_table(kanji, meaning, onyomi, kunyomi, createdAt)
-VALUES (?, ?, ?, ?, ?);
+INSERT OR IGNORE INTO kanji_table(kanji, meaning, hint, onyomi, kunyomi, createdAt)
+VALUES (?, ?, ?, ?, ?, ?);
+
+insertVocabQuestion:
+INSERT INTO kanji_question_table(kanji, question, answer)
+VALUES (?, ?, ?);
 
 selectAllKanji:
 SELECT * FROM kanji_table
@@ -18,8 +31,15 @@ ORDER BY createdAt DESC;
 selectKanji:
 SELECT * FROM kanji_table WHERE kanji = ?;
 
+selectVocabQuestions:
+SELECT * FROM kanji_question_table WHERE kanji = ?;
+
 deleteKanji:
 DELETE FROM kanji_table WHERE kanji = ?;
 
+deleteVocabQuestion:
+DELETE FROM kanji_question_table
+WHERE kanji = ? AND question = ?;
+
 updateKanji:
-UPDATE kanji_table SET meaning = ?, onyomi = ?, kunyomi = ?, incorrectCount = ? WHERE kanji = ?;
+UPDATE kanji_table SET meaning = ?, hint = ?, onyomi = ?, kunyomi = ?, incorrectCount = ? WHERE kanji = ?;
