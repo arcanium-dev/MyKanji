@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 internal val MyKanjiLightColorScheme: ColorScheme = lightColorScheme(
+    primary = Color(0xFF000000),
     surfaceVariant = Color(0xFFFFFFFF),
     errorContainer = Color(0xFFFA5F5F),
     onErrorContainer = Color(0xFFFFFFFF)

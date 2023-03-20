@@ -46,9 +46,10 @@ class MainActivity : ComponentActivity() {
                                 }
                             },
                             revisionState = revisionState,
-                            onIncorrectClicked = revisionViewModel::onIncorrectClicked,
-                            onCorrectClicked = {},
                             setIsKanjiHidden = revisionViewModel::setIsKanjiHidden,
+                            onAnswerTextChange = revisionViewModel::onAnswerTextChange,
+                            onSubmitClick = revisionViewModel::onSubmitClick,
+                            incrementKanjiRevisionIndex = revisionViewModel::incrementKanjiRevisionIndex
                         )
                     }
                 }

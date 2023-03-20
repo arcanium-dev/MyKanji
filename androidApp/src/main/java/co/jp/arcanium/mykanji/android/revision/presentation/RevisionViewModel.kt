@@ -29,20 +29,30 @@ class RevisionViewModel @Inject constructor(
         }
     }
 
-    fun onIncorrectClicked() {
-        // TODO - remember to track that that the user got this kanji wrong!
-        _revisionState.update {
-            it.copy(currentIndex = it.currentIndex + 1)
-        }
-    }
-
-    fun onCorrectClicked() {
-        _revisionState.update {
-            it.copy(currentIndex = it.currentIndex + 1)
-        }
-    }
-
     fun setIsKanjiHidden(isKanjiHidden: Boolean) {
         _revisionState.update { it.copy(isKanjiHidden = isKanjiHidden) }
+    }
+
+    fun onAnswerTextChange(answerText: String) {
+        _revisionState.update {
+            it.copy(
+                questionState = it.questionState.copy(answerText = answerText)
+            )
+        }
+    }
+
+    fun onSubmitClick() {
+        _revisionState.update { revisionState ->
+            val currentQuestionIndex = revisionState.questionState.currentQuestionIndex
+            revisionState.copy(
+                questionState = revisionState.questionState.copy(
+                    currentQuestionIndex = currentQuestionIndex + 1
+                )
+            )
+        }
+    }
+
+    fun incrementKanjiRevisionIndex() {
+        _revisionState.update { it.copy(currentIndex = it.currentIndex + 1) }
     }
 }
