@@ -12,8 +12,6 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val localKanjiDataSource: LocalKanjiDataSource
 ) : ViewModel() {
-
-
     fun setup() {
         viewModelScope.launch {
             Kanji.defaultKanjiList.forEach {

@@ -1,5 +1,6 @@
 package co.jp.arcanium.mykanji.android.revision.presentation
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,7 +25,8 @@ fun RevisionScreenTopBar(
         Text(
             modifier = Modifier
                 .padding(start = 16.dp)
-                .align(Alignment.CenterStart),
+                .align(Alignment.CenterStart)
+                .clickable(onClick = onExitClicked),
             text = "Exit",
             style = MaterialTheme.typography.bodyMedium
         )

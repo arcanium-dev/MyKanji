@@ -4,5 +4,6 @@ import co.jp.arcanium.mykanji.kanji.domain.model.Kanji
 
 data class RevisionState(
     val currentIndex: Int = 0,
-    val kanjiRevisionSet: List<Kanji> = listOf()
+    val kanjiRevisionSet: List<Kanji> = listOf(),
+    val isKanjiHidden: Boolean = true
 )

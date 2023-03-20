@@ -45,7 +45,10 @@ class MainActivity : ComponentActivity() {
                                     popUpTo(Route.Home.route)
                                 }
                             },
-                            revisionState = revisionState
+                            revisionState = revisionState,
+                            onIncorrectClicked = revisionViewModel::onIncorrectClicked,
+                            onCorrectClicked = {},
+                            setIsKanjiHidden = revisionViewModel::setIsKanjiHidden,
                         )
                     }
                 }
